@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <link type="text/css" rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="music.js"></script>
+
+    <title>Music Player!</title>
+  </head>
+  <body>
+      <div id="tab_list" style="background-color:#1C3A3F; font-weight: bolder;">
+    <ul class="nav nav-tabs">
+        <li class="nav-item" id="playlist">
+          <a class="nav-link" >Playlists</a>
+        </li>
+      </ul>
+      </div>
+      <div id="task_space">
+        <ul id="playlisttag">
+          <li id="li1"></li>
+          <li id="li2"></li>
+          <li id="li3"></li>
+          <li id="li4"></li>
+        </ul>
+      </div>
+      <div id="main_card">
+          <img src="https://cutewallpaper.org/21/bts-fake-love-fanart/BTS-Fake-Love-Billboard-Music-Awards-Inspired-Fanart-.jpg" id="music_image">
+
+          <div class="jumbotron">
+            <h1 class="display-4">Fake Love</h1>
+            <p class="lead">BTS</p>                        
+            <button type="button" class="btn btn-secondary" onclick="myFunctionP3()" data-toggle="tooltip" data-placement="top" title="current song">Play</button> 
+          </div>
+          <div id="commentandrating">
+            <ul id="commentlist">
+
+            </ul>
+            
+          </div>
+      </div>
+    
+      <div id="personalize">
+
+        <table id="formtable"><tr><input type="text" placeholder="write a playlist name to add it." id="input" class="form-control form-control"></tr>
+          <tr><button type="submit" class="btn btn-secondary" id="addplay"  onclick="myplaylist()">Add Playlist</button></tr>
+            
+        </table>
+        
+          <form>
+            <select name="cars" class="custom-select" id="styleselect">
+              <option selected>Rate !!</option>
+              <option value="1">1 star</option>
+              <option value="2">2 star</option>
+              <option value="3">3 star</option>
+              <option value="4">4 star</option>
+              <option value="5">5 star</option>
+            </select>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="inputcomment">
+            <div class="input-group-append">
+              <button class="btn btn-secondary" type="button" onclick="ratingcalculate()" >Comment</button>
+            </div>
+          </div>
+        </form>
+
+        
+
+      </div>
+
+
+    
+
+      <footer>
+        <img src="https://cutewallpaper.org/21/bts-fake-love-fanart/BTS-Fake-Love-Billboard-Music-Awards-Inspired-Fanart-.jpg" id="footer_music_image">
+        <audio controls id="audio_button">
+            <source  onclick="myFunctionP3()" type="audio/mpeg">
+                
+          </audio>
+          <div class="btn-group" role="group" aria-label="Basic example" id="controler">
+            <button type="button" class="btn btn-secondary" onclick="myFunctionP1()" data-toggle="tooltip" data-placement="top" title="previous song">previous</button>
+            <button type="button" class="btn btn-secondary" onclick="myFunctionP2()" data-toggle="tooltip" data-placement="top" title="next song" >next</button>
+          </div>
+          
+      </footer>
+    
+  </body>
+</html>
